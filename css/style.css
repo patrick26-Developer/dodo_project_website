@@ -58,7 +58,7 @@ body {
 }
 
 #logo img {
-    height: 160px;
+    height: 60px;
     width: auto;
 }
 
@@ -121,6 +121,17 @@ body {
 
 #navigation a.active {
     background: #d73027;
+}
+
+/* Menu Burger */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px;
 }
 
 /* Main Content Area */
@@ -346,13 +357,42 @@ body {
         font-size: 2rem;
     }
 
+    /* Menu Burger Styles */
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+
+    #navigation {
+        position: relative;
+    }
+
     #navigation ul {
+        display: none;
         flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #2c3e50;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    #navigation ul.show {
+        display: flex;
+    }
+
+    #navigation li {
+        width: 100%;
     }
 
     #navigation a {
         padding: 15px 20px;
         border-bottom: 1px solid #34495e;
+        text-align: left;
     }
 
     #midpage {
@@ -406,6 +446,11 @@ body {
 
     #aside {
         padding: 15px;
+    }
+
+    .menu-toggle {
+        top: 15px;
+        right: 15px;
     }
 }
 
